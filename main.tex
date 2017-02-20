@@ -1,0 +1,1149 @@
+\documentclass{book}
+%\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usepackage{bclogo}
+\usepackage{nomencl}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+\usepackage{amsmath ,amsthm ,amssymb}
+\usepackage{scrextend}
+\usepackage{marvosym}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{pst-node}
+\usepackage{listings}
+\usepackage{pict2e,picture}
+\usepackage{tabto}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\title{Algebra
+ For College and Advanced High School Students}
+\author{Insall \and Kitchen }
+\date{August 2016}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\chapter{Solving Equations and Inequalities}
+
+\section{Notation for Solutions and Solution Sets}
+
+Here we will introduce arguably one of the most important mathematical tools one could possibly learn: Algebra. The ability to derive equations and inequalities for a given practical problem and solve such equations and inequalities is essential not only to study higher level mathematics, but to use in our everyday lives. For instance, consider a farmer who needs to evenly distribute seeds across his fields, a doctor counting the number of malignant cells on the biopsy of a tumor, a forensic scientist calculating how far away someone was before they were murdered, or a stay-at-home parent who wants to balance their checkbook. All of these involve Algebra.
+In this text, by the term ``{\bf Algebra}'', we will mean a course in mathematics which introduces elementary mathematical symbols and shows how to use them. At the base of Algebra is the ability to solve equations. At a higher level, one must learn to use groups, rings, fields, and an infinite host of other ``algebraic structures''. 
+An {\bf equation} is a statement of equality between two mathematical expressions and is denoted by the equals sign, $=$. One of the things that makes the equations we will study useful is that we can effectively (and often efficiently) determine the values of its variables that make it a true statement.  We can also derive the original equation itself from the needs of a practical problem like some of those mentioned above. In our algebra class, a {\bf variable} is a placeholder for a number, function, or expression, represented by a letter or symbol. When used in an equation, variables can have several meanings. For examples of such meanings we use the following equation.
+
+\begin{equation}\label{(1)}
+    x=5
+\end{equation}
+
+\subsection{Variables}
+
+In some settings (\ref{(1)}), can be said to ``{\bf define}'' the variable, $x$, as $5$.   We could just have easily set $z=5$ or $y=5$ or $\Gamma=5$ or $\bcsmbh{}=5$, but the some of the most widely used variables are $x$ (first dimension), $y$ (second dimension), $z$ (third dimension), $t$ (time, also sometimes called ``the fourth dimension'', outside mathematics), and $n$ (number). In this example because $x$ is defined as 5, anytime we see $x$ in another related equation, we can replace it with 5. We can even construct more equations with it ($x+5=10$).
+
+\subsection{Finding Solutions to Equations}
+
+Instead of defining $x$ to be $5$, an equation like $x=5$ can stand for the question, ``Which numbers are equal to $5$?''.  Although this may seem to be a silly question at the outset, other more complicated questions are often formulated as equations.  Before we consider some of those, let us note that if we {\bf replace} the symbol $x$ with the number $4$, then we get a false statement, namely the statement $4=5$. From counting we know 5 is one more than 4, so the two cannot be equal. We also know if we put 4 eggs into a cake recipe that calls for 5 eggs, the cake we are cooking will not be equal to the recipe cake. On the other hand, if we replace $x$ with the number $5$, then we get the equation $5=5$, which we understand to be a true statement, based upon the same convention.  Thinking carefully about the various numbers we can {\bf substitute} for $x$ in the equation $x=5$, we conclude that the answer to the question ``Which numbers are equal to $5$'' is the statement ``Only $5$ is equal to $5$.'', but in order to conclude this, we also had to come to the understanding that expressions like $25/5$ or $\frac{25}5$ or $10-5$ {\bf reduce} to $5$, because of our experience with arithmetic.  
+A {\bf solution} of an equation is a listing of one or more values which make an equation true. Let us find all of the solutions to
+
+\begin{equation}\label{(2)}
+x^2=36.                
+\end{equation}
+
+What we need to find are the values \textcolor{red}{substitutable} for $x$ \textcolor{red}{whose square is} $36$. It is important to note that, although (\ref{(1)}) is an expression that very well could be related to (\ref{(2)}), it is not a solution to (\ref{(2)}) because $5^2\ne36$  \textcolor{red}{(in other words, $5^2$ is not equal to $36$)}. However, we can say $6$ is a solution to the equation (\ref{(2)}).  But, as most modern scientists would agree, $6$ is not the only solution to (\ref{(2)}), since the square of $-6$ also is $36$.  Let us introduce some notation for statements like ``$6$ is a solution of the equation $x^2=36$’’, ``$-6$ is a solution of the equation $x^2=36$’’, ``$6$ and $-6$ are solutions of the equation $x^2=36$’’, and ``$6$ and $-6$ are the only solutions of the equation $x^2=36$’’.
+
+\subsubsection{Tools for Writing Implication Statements}
+
+An implication statement takes the form ``If $p$ then $q$.'', where $p$ and $q$ are simpler statements.  By claiming that  ``If $p$ then $q$'' is true, we mean to assert that any situation in which statement $p$ is true, statement $q$ also is true.
+Since we will deal with more complex statements, we use symbols as short-hand for the statements. For these statements we use the double turnstile, $\models$, and the implication symbol, $\rightarrow$. The double turnstile means ``In all number systems we will consider'' or ``entails that.'' It can be used as the ``if'' in an implication statement. The implication symbol says a statement is true, but that its converse does not have to be. A {\bf converse} is the switching of the hypothesis and conclusion of a conditional statement. For instance we take the example ``If I am a human, then I have a heart'' and will consider it to be a true statement. Note the converse is ``If I have a heart, then I am human'' is not necessarily true since I can be a lizard, bear, or other animal and still have a heart. Therefore we would shorthand the example into ``I am a human$\rightarrow$I have a heart''. The implication symbol can be thought of as the ``then'' in a statement. If both a statement and its converse are true, then the statement is called a {\bf definition}. 
+Definitions are ``{\bf bi-implications}'', such as ``$p \leftrightarrow q$'', written out as ``$p$ if and only if $q$'', or ``$p$ iff $q$''. They are a stronger version of an implication statement. Take for instance ``If I am thinking, then I am alive,'' which we will assume to be true and its converse ``If I am alive, then I am thinking'' which we will assume is also true. We could write the statement as a basic implication statement ``I am thinking$\rightarrow$I am alive'', but this would not be as strong as ``I am thinking$\leftrightarrow$I am alive''.   
+
+\subsubsection{Implication vs. Bi-Implication and Abuse of Terminology}
+Some authors of books and articles assume that the reader understands that all definitions are bi-implications, and write them as implications only in one direction.  For example, if we say that the following is the definition of the word ``even'', and write it in implicational form, we get 
+
+\vspace{3mm}
+\begin{definition} 
+If an integer $x$ is a multiple of two, then $x$ is an {\bf even} integer.
+\end{definition}
+\vspace{3mm}
+
+This is a ``more relaxed'' way to say 
+
+``An {\bf even integer} is precisely an integer that is a multiple of two.''
+
+or 
+
+``For any integer $x$, $x$ is {\bf even} if and only if $x$ is a multiple of two.''
+
+Now, the following statement also is true:  
+
+``For every integer $x$, if $x$ is a multiple of four, then $x$ is an even integer.''
+
+The above statement involves the slightly simpler statement 
+
+``If $x$ is a multiple of four, then $x$ is an even integer.''
+
+which also is true.  However, the converse of the above is the following false statement:  
+
+``If $x$ is an even integer, then $x$ is a multiple of four.''  
+
+Since the statement 
+
+``The integer $x$ is a multiple of four if and only if $x$ is an even integer.''
+
+is false, we choose not to use it as a definition of what is meant by the term ``even integer''.  (That is not the only reason, however...)  But since the statement 
+
+
+``The integer $x$ is a multiple of two if and only if $x$ is an even integer.''
+
+is actually what we intend when using the term ``even integer'', then the precisely correct {\bf definition} of the term {\bf even integer} is this more precise bi-implication statement, which asserts both the statement 
+
+``If an integer $x$ is a multiple of two, then $x$ is an {\bf even} integer.''
+
+and its converse, which is, of course 
+
+``If an integer $x$ is an {\bf even} integer, then $x$ is a multiple of two.''
+
+The habit of using an implication statement as a definition is an instance of a cultural phenomenon in mathematics and the sciences that may reasonably be referred to as an ``abuse of notation and terminology''.  We plan to try to warn the reader when we will use such looser language, and to try to point out the clearer, more detailed (aka ``pedantic'') versions of phraseology, when we decide to use the less pedantic versions.  Let us now exit our excursion into a discussion of abuses of terminology and continue with our discussion of the notation itself.  
+
+\subsection{Denoting One Possible Solution}
+
+For ``$6$ is a solution of the equation $x^2=36$'', we will write 
+
+\begin{equation}\label{(3.1)}
+x=6 \models x^2=36
+\end{equation}
+or  
+\begin{equation}\label{(3.2)}
+\models x=6 \rightarrow x^2=36.  
+\end{equation}
+
+Actually, we will think of these as meaning that ``$x$ being $6$ entails $x^2=36$’’, or equivalently, ``in all number systems we will consider, if $x$ is $6$ then $x^2=36$''.
+
+Note the converse of this relationship: 
+	
+\begin{equation}\label{(3.3)}
+x^2=36\models x=6, 
+\end{equation} 
+or  
+\begin{equation}\label{(3.4)}
+\models x^2=36\rightarrow x=6
+\end{equation}
+ 
+is not necessarily true in the real number line, denoted $\mathbb{R}$, because if $x^2=36$, $x$ could be $-6$. That is why we use the implication symbol instead of the bi-implication symbol, $\leftrightarrow$ ( “if and only if”). Similarly, for ``$-6$ is a solution of the equation $x^2=36$'', we will write 
+
+\begin{equation}\label{(3.5)}
+x=-6\models x^2=36,\hbox{ or  }\models x=-6 \rightarrow x^2=36.
+\end{equation}
+
+\subsection{Denoting All Possible Solutions}
+A \textbf{solution set} is a listing, in any order, of every possible solution to an equation, with any amount of repetition. Set notation uses curly braces, $\{$ and $\}$, and elements in a set are often listed from least to greatest value. To denote a solution set, we will use an epsilon, $\epsilon$. It means ``is a part of'' or ``being in the set.''
+In case we want to notationally convey that ``6 and -6 are solutions of the equation $x^2=36$'', we shall write something like one of the following:
+
+\begin{equation}
+\label{(3.6)}
+x\epsilon\{-6,6\} \vDash x^2=36
+\end{equation}
+
+meaning ``x being in the set $\{-6,6\}$ entails that $x^2=36$''. Or
+
+\begin{equation}
+\label{(3.7)}
+\vDash x\epsilon\{-6,6\} \rightarrow x^2=36,
+\end{equation}
+
+meaning ``in our number systems, if $x$ is in the set $\{-6,6\}$, then $x^2=36$'', or
+
+\begin{equation}
+\label{(3.8)}
+\vDash (x=6 \rightarrow x^2=36) \text{ \& } (x=-6 \rightarrow x^2=36),
+\end{equation}
+
+meaning ``in our number systems, if $x$ is 6 then $x^2=36$ and if $x=-6$ then $x^2=36$'', or
+
+\begin{equation}
+\label{(3.9)}
+(x=6) \text{ or } (x=-6)  \vDash x^2=36,
+\end{equation}
+
+meaning ``$x$ being 6 or -6 entails that $x^2=36$''.
+
+Finally, if we want to notationally convey that ``6 and -6 are the only solutions of the equation $x^2=36$'', we shall write something like one of the following:
+
+\begin{equation}
+\label{(3.10)}
+\vDash x\epsilon\{-6,6\} \leftrightarrow x^2=36
+\end{equation}
+
+meaning ``in our number systems, $x$ is in the set $\{-6,6\}$ if and only if $x^2=36$.''
+
+In this course we will be working with $\mathbb{R}$ unless otherwise stated. In the real number line, there is no square root of a negative number and a number cannot be divided by 0. If an equation involves working outside of the real line, we say it has no real solution and its solution set in the real line is the empty set, denoted $\emptyset$.
+
+\subsection{Set-Builder Notation}
+
+The last notation we give for representing sets is \textbf{set-builder notation}. This notation uses a vertical bar  ($|$) or sometimes a colon ($:$) to separate a variable from its constraint. When using sets, the vertical bar can be read ``such that.'' Set-builder notation is usually paired with inequalities to designate more than a few numbers in a set or solution set.
+
+An \textbf{inequality} is a relation between two mathematical expressions that are either never equal or only sometimes equal. They are denoted by the the less-than ($<$), greater-than($>$), less-than-or-equal-to ($\leq$), greater-than-or-equal-to ($\geq$) symbols. The less-than and greater-than signs are \textbf{exclusive} meaning the numbers on the left and right are not contained in the set. The less-than-or-equal-to and greater-than-or-equal-to signs are \textbf{inclusive} meaning the numbers on the left and right are contained in the set. Let us change our initial example to
+
+\begin{equation}
+\label{(3.11)}
+x^2\leq36.
+\end{equation}
+
+The solution set to \ref{(3.11)} will include the solution set to \ref{(2)}, but also all of the numbers in between. We can represent the solution set in set builder notation as
+
+\begin{equation}
+\label{(3.12)}
+\{x|-6\leq x\leq6\}
+\end{equation}
+
+The solution set is read ``for $x$ such that $x$ is greater than or equal to -6 and $x$ is less than or equal to 6.''
+
+\subsection{Problems:}
+
+Tell whether each of the following numbers are solutions to the given equation:
+
+\vspace{3mm}
+
+1) $x=5$, $2x+5=15$
+
+2) $y=9$, $3y=27$
+
+3) $y=3$, $3(y+3)=18$
+
+4) $z=0$, $z^{64}+1=0$
+
+5) $y=-2$, $5(2-y)=0$
+
+6) $\sigma=2.2$, $10\sigma+5=27$
+
+7) $\rho=0$, $12/\rho=0$
+
+8) $\kappa=-1$, $5+\sqrt{\kappa}=4$
+
+9) $x=2$, $y=3$, $x+y=5$
+
+10) $n=14$, $m=10$, $n*m=125$
+
+\vspace{5mm}
+
+Tell whether each of the following are solution sets to the given equation and explain why or why not:
+
+\vspace{3mm}
+
+11) $3x+2=14$, $\{4,4,4\}$
+
+12) $n=n$, $\{1\}$
+
+13) $5/n=0$, $\{\emptyset\}$
+
+14) $5/n=0$, $\emptyset$
+
+15) $x^2=49$, $\{7\}$
+
+\vspace{5mm}
+
+Write the meaning of the following turnstile statements:
+
+\vspace{3mm}
+
+16)  $\vDash x\epsilon\{3\} \rightarrow x-6=-3$
+
+17)  $x=4 \vDash 5x=20$
+
+18)  $(x=1)$ or $(x=-1)  \vDash x^4=1$
+
+19)  $\vDash (x=5 \rightarrow x^2=25) \& (x=-5 \rightarrow x^2=25)$
+
+20)  $\vDash x\epsilon\{-8,8\} \leftrightarrow x^2=64$
+
+
+\vspace{5mm}
+
+Write a turnstile statement from the following meanings:
+
+\vspace{3mm}
+
+21) 10 is a solution to $x-5=5$
+
+22) 7 is a solution to $12+x=19$
+
+23) 4 and -3 are solutions to $x^2-x+12=0$
+
+24) 2,3,4, and 5 are solutions to $x=x$
+
+25) 9 is the only solution to $2x=18$
+
+
+\vspace{5mm}
+
+Check whether the set is a solution set to the given inequality. If so, write the solution set in set-builder notation:
+
+\vspace{3mm}
+
+26) $x>4/5$, $5x+3>7$
+
+27) $y<10$, $y^2\leq100$
+
+28) $z\geq7$, $-2z+8\leq-6$
+
+29) $-3<p<3$, $p^2<9$
+
+30) $t<-4$ or $t>4,t^2+5>21$
+
+\newpage
+
+\section{Linear Equations and Inequalities}
+\subsection{Why Use Linear Equations?}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%  160817We0556(Changes Begin Here)  %%%%%%%%%%%%%%%
+Lines and line segments are needed to represent objects in a plane or in three dimensional space (``physical space'').The straight connection of two points, the edges of a square or cube, and the strokes of a letter or word are all examples of line segments. The term ``line'' is reserved for ``straight one dimensional objects of unlimited extent''. Even curves, like a circle, can be loosely represented with ``an infinite number of infinitesimally small line segments'' (the fundamental idea behind this is one of the core ideas of Calculus).  
+But to work with lines and line segments, we need to represent them in a way we can get one dimension from another (a way to “plug and chug”). We need the representation to be constant, so that if we give our representation to another mathematician, scientist, or student they will be able to get the same results. Lastly we need the representation to be convertible to something visual (ie a graph). Our representation is a linear equation.
+%%%%%%%%%%%%  160817We0556(End of Changes)  %%%%%%%%%%%% Okayed 160820Sa1140
+\subsection{Solving Linear Equations}
+A linear equation is any equation which can be written in the form
+
+\begin{equation}
+\label{(4.1)}
+ax+b=0
+\end{equation}
+                        
+Where $x$ is an arbitrary variable and $a,b\epsilon \mathbb{R}$ ($a$ and $b$ are real numbers). $a$ and $b$ are called \textbf{coefficients}, or the constant numbers in an equation. $a$ cannot be zero or the variable would be lost, but $b$ can be zero. When a linear equation is written in this way, we say it is in standard form. A defining feature of a linear equation is the variable is raised to the first power. 
+Solving linear equations involves \textbf{isolating the variable}, or transforming the equation until the variable is on one side with everything else on the other side. To solve linear equations, we must operate on both sides of an equation. It is important to note everything we do on one side of an equation must be done on the left hand side to keep equality. 
+Some of the most common operations are adding, subtracting, multiplying, and dividing. It is most useful to apply the inverse operations of the operations in the original equation.
+
+For example, we use the equation
+\begin{equation}
+\label{(4.2)}
+5x+10=0.
+\end{equation}
+
+We will solve the equation in 2 steps. First we do the inverse of addition: subtract $10$ from both sides to isolate $5x$ on the left side.
+\begin{equation}
+\label{(4.3)}
+\begin{split}
+5x+10  &=  0 \\
+  -10  &  -10 \\
+5x     &= -10
+\end{split}
+\end{equation}
+
+Second we do the inverse of multiplication: divide $5$ from both sides to isolate $x$ on the left side.
+
+\begin{equation}
+\label{(4.4)}
+\begin{split}
+5x/5  &=  -10/5 \\
+  x   &=  -2
+\end{split}
+\end{equation}
+
+Now that $x$ is isolated we can write the solution set to $5x+10=0$.
+
+\begin{equation}
+\label{(4.5)}
+\models x\epsilon\{-2\}\leftrightarrow 5x+10=0
+\end{equation}
+
+If a variable is trapped in a set of parenthesis being multiplied by a constant, we will need to distribute the constant to the parenthesis first. A good rule of thumb for solving linear equations is
+Distribute Parenthesis (remember to multiply a negative sign to all variables inside Parentheses).
+Combine Constants with Constants and Combine Variables with Variables
+Apply Inverse Addition or Subtraction
+Apply Inverse Multiplication or Division
+Plug back in and Check your Answer.
+
+We will now show a more complicated example:
+
+\begin{equation}
+\label{(4.6)}
+5(2x+4)-3(x+3)=25
+\end{equation}
+
+%\begin{equation}
+\begin{align*}\label{(4.7)}
+&\text{Distribute}             & 10x+20-3x-9      &= 25 \\
+&\text{Combine}                & 7x+11            &= 25 \\
+&\text{Inverse Addition}       & 7x               &= 14 \\
+&\text{Inverse Multiplication} & x                &=  2 \\
+&\text{Check}                  & 5(2*2+4)-3(2+3)  &= 25 \\
+&                              & 5(4+4)-3(5)      &= 25 \\
+&                              & 5(8)-15          &= 25 \\
+&                              & 40-15            &= 25 \\
+&                              & 25               &= 25 \checkmark{}
+\end{align*}
+%\end{equation}
+            
+And the solution set is
+
+\begin{equation}
+\label{(4.8)}
+\models x\epsilon\{2\}\leftrightarrow 5(2x+4)-3(x+3)=25
+\end{equation}
+
+\subsection{Solving Linear Inequalities}
+We can solve linear inequalities in the same way with one exception. When multiplying or dividing by a negative, we must switch the direction of the inequality sign.
+\begin{equation}
+\label{(4.9)}
+(x+4)/-8 > 4
+\end{equation}
+%\begin{equation}
+\begin{align*}\label{(4.10)}
+&\text{Multiply by -8 and Flip Inequality}        & x+4 &< -32 \\
+&\text{Subtract by 4}                             & x   &< -36 
+\end{align*}
+%&\end{equation}
+
+For the sake of checking we use $-37$ which is one less than $-36$ and is in the set of numbers less than $-36$.
+
+\begin{equation}
+\label{(4.11)}
+\begin{split}
+(-37+4)/-8  &>  4 \\
+  (-33)/-8  &>  4 \\
+  4.125     &>  4 \checkmark{}
+\end{split}
+\end{equation}
+
+So the solution set is
+\begin{equation}
+\label{(4.12)}
+\{x|x<-36\}
+\end{equation}
+                        
+        
+\subsection{Problems:}
+
+Find the solution set for the following linear equations:
+
+\vspace{3mm}
+
+1) $4x+8=16$
+
+2) $3y/7=15$
+
+3) $7(y+7)=14$
+
+4) $2(z-2)+8=0$
+
+5) $5(2-y)+3(4+y)=2$
+
+6) $9(\sigma+5)/7+(\sigma-4)/3=4$
+
+\vspace{5mm}
+Find the solution set for the following inequalities:
+\vspace{3mm}
+
+1) $4x+8<16$
+
+2) $3y/7>15$
+
+3) $7(y+7)\leq14$
+
+4) $2(z-2)+8\geq0$
+
+5) $5(2-y)+3(4+y)>2$
+
+6) $9(\sigma+5)/7+(\sigma-4)/3<4$
+
+\newpage
+
+\section{Applications of Linear Equations and Inequalities}
+
+\subsection{Steps for Solving Linear Word Problems}
+
+In Section 1.1, we said one of the most important parts of Algebra was turning a real life problem into an equation, solving it, and then relating that solution back to the real world problem. Here we give potential real world issues, in the form of story problems, and solve them.
+The strategy we give for solving these problems is
+
+\begin{enumerate}
+    \item Read the problem.
+    \item Identify the variables.
+    \item Set up a linear equation or inequality with the variables.
+    \item Solve the linear equation or inequality.
+    \item Reread the problem, add the correct units, and make sure the answer makes sense.
+\end{enumerate}
+
+The best way to get better at solving story problems is to do a lot of them. It is impossible to show every possible story problem, but we show one here for example.
+
+\subsection{Calculating Required Test Grades}
+\begin{addmargin}[2em]{2em}
+Jeremy has not been practicing his Algebra! His scores on the last 3 tests were 55, 76, and 68. What would Jeremy need on his last test to receive a C (70) average in the class? What would Jeremy need on his last test to receive a B (80) average in the class? Assume test scores are the only scores which contribute to the final class grade.
+\end{addmargin}
+\begin{enumerate}
+\item After reading the problem we notice this is an averaging problem. We need to take the average of all the test scores to receive a final grade.
+\item There is one variable we need to solve for in each section: Jeremy’s last test grade (represented by $C$ in part 1 and $B$ in part 2).
+\item \begin{align*} \text{Final Grade} &= \text{Sum of Test Scores} / \text{Number of Test Scores}\\
+70 &= (55+76+68+C)/4 \\
+80 &= (55+76+68+B)/4 
+\end{align*}
+\item \begin{align*}
+    &70*4 &= &(199+C)/4 * 4 \\
+    &280-199 &= &199+C-199 \\
+    &81      &= &C \\ 
+    \\
+    &80*4 &= &(199+B)/4 * 4 \\
+    &320-199 &= &199+B-199 \\
+    &121      &= &B  
+\end{align*}
+\item To receive a C, Jeremy would need to receive an 81\% on his last test. To receive a B, Jeremy would need to receive a 121\% (impossible!). It makes sense Jeremy would not be able to receive a B because all of his other scores are nowhere near a B.
+\end{enumerate}
+
+\subsection{Problems:}
+
+Solve the story problems involving linear equations.
+
+\vspace{3mm}
+
+1) The width of a sparkly pink rectangle is 25 inches. What would the length need to be to have a perimeter of 110 inches?
+
+2) The base of a mega triangle is 13 feet. What would the height need to be to have an area of 26 square feet?
+
+3) If in Rosa’s underwater basket weaving class, homework is 20\% of her grade, tests are 50\% of her grade, and quizzes are 30\% of her grade, find her homework grade if her test score is 85, quiz grade is 92, and final grade is 88.
+
+4) George is one of the many carpenters of FloorsVille. He only has 60 square meters of flooring, but needs to make a trapezoidal floor with height 5 meters and one base that is 2 times as large as the other. How large are the two bases?
+
+5) Sales tax on an Oprah book is 7.5\%. If the buyer pays \$21.49 at the register, how much was the book listed for on the shelf?
+
+6) A 2016 Mustang GT’s max speed is 164 mph. The Hennessey Venom GT’s max speed is 270 mph. If the two cars start facing each other 50 miles apart, how long would it take for the cars to cross? Assume the cars start at their max speeds.
+
+7) Refer back to Problem 6, but this time the Venom starts 20 minutes after the Mustang. How long would it take for the cars to cross? Assume cars start at their max speed.
+
+8) Synthetic diamond machines make diamonds from graphite under high temperature and pressure. Machine A can make a diamond in 10 days. Machine B can make a diamond in 14 days. How long would it take the machines, working together to make a diamond?
+
+9) We have 20 gallons of a 20\% mentos-coke solution. How many gallons of a 50\% mentos-coke solution should we add to get a 35\% mentos-coke solution?
+
+10) The animal shelter feeds 33 dogs 12 lbs of food. How much food should it feed 24 dogs?
+
+\vspace{5mm}
+
+Solve the story problems involving inequalities.
+
+\vspace{3mm}
+
+1)  Barbara’s mother gave Barbara \$20. Barbara wants to buy a chocolate bar for \$1.21, a doll for \$9.87, and a box of stickers for \$3.22. She wants to give at least \$5 back to her mother, so Barbara won’t look greedy. How much more can she spend?
+
+2) The Hoover Dam can hold 10 trillion gallons of water. Billy wants to overflow the Hoover dam by refilling and dumping his sippy cup which holds .2 gallons. How many times can Billy refill and dump his sippy cup to keep the Dam overflowed.
+
+3) There are at least 100 billion planets in the Milky Way Galaxy. If a planet has an average mass of $5*10^{24}$ kg and a person has an average mass of 20kg, how many people would we need to take up as much space as the planets?
+
+\newpage
+\section{Expanding Factored Quantities- The ``FOIL method''}
+
+We will take a break from solving equations for a section to learn how to expand expressions. For the rest of chapter 1, knowing when to use a factored form (ie $(ax+b)(cx+d)$), and when to use an expanded form (ie $ax^2+bx+c$) will become important.
+\subsection{FOIL 2 Quantities}
+The technique for expanding expressions is called \textbf{FOIL} meaning First Outer Inner Last. What this means is we must multiply the first term of both quantities together, multiply the outer terms of both quantities together, multiply the inner terms of both quantities together,  multiply the last terms of both quantities together, and finally add each of those together. Let us do an example:
+
+%\begin{equation}
+\begin{align*}\label{(5.1)}
+&       &(2x+8)(3x-2)& \\
+&\text{First}  &2x*3x&=6x^2 \\
+&\text{Outer}  &2x*-2&=-4x \\
+&\text{Inner}  &8*3x&=24x \\
+&\text{Last}   &8*-2&=-16 \\
+&\text{Add Together} &6x^2-4x+24x-16& \\
+&\text{Final Answer} &6x^2+20x-16&
+\end{align*}
+%\end{equation}
+
+\subsection{FOIL More than Two Terms}
+We can even do more than two terms in the quantities. Just remember to multiply each term in the first quantity by each term in the second quantity. Here we will do an example multiplying 3 quantities together.
+
+%\begin{equation}
+\begin{align*}\label{(5.2)}
+&       &(x+3)(8x-3)(4-2x)& \\
+&\text{FOIL Quantity 1 and Quantity 2}  &(8x^2-3x+24x-9)(4-2x) \\
+&\text{Simplify new Quantity 1}  &(8x^2+21x-9)(4-2x) \\
+&\text{FOIL Quantity 1 and Quantity 2}   &32x^2-16x^3+84x-42x^2-36+18x \\
+&\text{Simplify Answer} &-16x^3-10x^2+102x-36&
+\end{align*}
+%\end{equation}
+
+\subsection{Problems:}
+
+Expand the following factored quantities.
+
+\vspace{3mm}
+
+1) $(x+4)(x-2)$
+
+2) $(x+9)^2$
+
+3) $(4x-11)(5x+2)$
+
+4) $(1-2x)(2x-8)$
+
+5) $(3+12x)(x^2+2x+3)$
+
+6) $(5+x)(3-x)(x+7)$
+
+7) $(10x+10)^3$
+
+8) $(x+1)(x-1)(x+1)(x-1)$
+
+\section{Solving Quadratic Equations and Inequalities}\label{Quadr}
+\subsection{What is a Quadratic Equation?}
+From the last 3 sections, we have the toolset to build and solve more complex equations and inequalities. Recall our introduction to algebraic notation (Section 1.1) and our equation
+
+\begin{equation}
+\label{(6.1)}
+x^2=36.
+\end{equation}
+
+The difference between this equation and the ones we worked with in Section 1.2 and 1.3, is the variable is raised to the second power. A {\bf quadratic equation} is an equation with a maximum exponent of 2. The maximum exponent is also the degree of an equation. We say \ref{(6.1)} has degree 2. We say linear equations have degree 1.
+If we take away the equals sign from \ref{(6.1)} we can write \ref{(6.1)} as either
+
+\begin{equation}
+\label{(6.2)}
+x^2
+\end{equation}
+
+or
+
+\begin{equation}
+\label{(6.3)}
+x^2-36
+\end{equation}
+
+Both of these are referred to as polynomials. A {\bf polynomial} is an expression using only addition, subtraction, multiplication, and non-negative integer exponents and containing only variables and coefficients. When an equal sign is introduced as done in \ref{(6.1)}, we can call the result, a polynomial equation. It is important to note a quadratic equation is always a polynomial equation, but a polynomial equation is not always quadratic.
+The standard form of a quadratic equation is
+
+\begin{equation}
+\label{(6.4)}
+ax^2+bx+c=0
+\end{equation}
+					
+where $x$ is an arbitrary variable, $a,b,c\epsilon \mathbb{R}$, and $a$ cannot be $0$.
+We will go through three ways of solving quadratic equations. It is important to note mathematicians are always looking for faster ways to solve quadratic equations because it leads to better security, cryptography, and computing, to name a few. If one finds an extraordinary and fast way to solve quadratic it should be reported immediately (see P=NP problem).
+
+\subsection{Factoring}
+Factoring is by far the easiest and fastest way to solve a quadratic solution. Unfortunately it only works for opportune equations.
+First consider the {\bf zero factor principle}: {\bf if $ab=0$ then $a$ or $b$ must be $0$}. It is important to note, this does not work if the right hand side is not equal to zero. $ab=10$ does not mean $a$ or $b$ must be $10$.  So if we can convert our quadratic equation into the form $ab=0$, we can set $a=0$ and $b=0$ and will have turned our quadratic into two linear equations which we can already solve.
+Second recall prime factorization. The prime factorization of $20$ is $2*2*5$ . We can do a sort of prime factorization on variables as well. Here are a few examples:
+
+\subsubsection{Reverse Distributive property}
+
+Much like $5(x+4)$ can be distributed into $5x+20$, we can reverse distribute it back to $5(x+4)$ which is in the form $ab$.
+
+\begin{equation}
+\label{(6.5)}
+ab+ac=a(b+c)
+\end{equation}
+
+\subsubsection{Grouping}
+
+We can separate an equation into groups and then use the reverse distributive property. 
+\begin{center}
+$5x^2+5x+3x+3$
+\end{center}
+can be separated into
+
+\begin{center}
+$(5x^2+5x) +  (3x+3)$. 
+\end{center}
+Then we use the reverse distributive property on both: 
+
+\begin{center}
+$5x(x+1) + 3(x+1)$ . 
+\end{center}
+Luckily in this situation, $(x+1)$ is in both terms, so we can use the reverse distributive property again. This will not always happen, but the final factorization is 
+
+\begin{center}
+$(5x+3)(x+1)$.
+\end{center}
+
+
+\begin{equation}
+\label{(6.6)}
+ab+ac+dc+ed = a(b+c)+d(c+e)\text{ if }(b+c)=(c+e)\text{ then }(a+d)(b+c)
+\end{equation}
+
+\subsubsection{Part by Part} 
+
+When method 1 and 2 will not work, there is one last factoring technique. Take $x^2+7x+10$. We first look at the squared term. If its coefficient is one, we can continue otherwise we need to skip to technique 4. We know only $x$ is a factor of $x^2$ so we can set up $(x+a)(x+b)$ and solve for a and b. Now we look at the coefficient without a variable and factor it. The factorization of $10$ is $10, 5, 2,1$.  If any of these factors can be combined to get the coefficient of the middle term, we have the factorization. Since $5+2=7$ we can use these terms as $a$ and $b$ and get the factorization to be $(x+5)(x+2)$. If no combination of factors works, we cannot factor and must use a different technique.
+
+\subsubsection{Part by Part Plus Grouping}
+
+When the coefficient of the squared term is not 1, we must use this technique. Take $5x^2+15x+10$. We must first multiply the coefficient of the squared term by the coefficient without a variable. $5*10=50$. Now we factorize $50: 50,25,10,5,2,1 $. Now we look for a combination of factors which equal the middle term, and set up a grouping equation with them. $5+10=50$, so we can write the equation as $5x^2+5x+10x+10$ or $5x^2+10x+5x+10$. Note either way works. Now do the grouping technique: $5x(x+1)+10(x+1)$ or $5x(x+2)+5(x+2)$. And Reverse Distribute: $(5x+10)(x+1)$ or $(5x+5)(x+2)$ are two correct ways to factor this polynomial.
+
+\subsubsection{Perfect Squares}
+
+There are two special grouping we can get from part by part factoring. Consider $x^2+4x+4$ . If we factor part by part we come out with $(x+2)(x+2)$ which can be written $(x+2)^2$ .
+
+\begin{equation}
+\label{(6.7)}
+x^2+2bx+b^2 = (x+b)^2
+\end{equation}
+
+\subsubsection{Difference of Squares}
+
+The second special grouping is used when two squares are being subtracted. Take $x^2-81$ . We can factor this into $(x+9)(x-9)$.
+
+\begin{equation}
+\label{(6.8)}
+x^2-b^2=(x+b)(x-b)
+\end{equation}
+
+\subsubsection{Example}	
+With these 6 techniques we can set up the zero factor principle and find the solution to a quadratic equation. For example:
+
+%\begin{equation}
+\begin{align*}\label{(6.9)}
+&       &x^2-13x+36&=0 \\
+&\text{Factor by Part by Part:}  &(x-9)(x-4)&=0 \\
+&\text{Set quantity one to 0 and quantity two to 0}          &x-9&=0\text{ or }x-4=0\\
+&\text{Solve for x}              &x&=9\text{ or }x = 4 \\
+&\text{Check first answer}       &9^2-13*9+36  &= 0 \\
+&                                &81-117+36    &= 0 \\
+&                                &-36+36       &=0 \\
+&                                &0            &=0 \checkmark{} \\
+&\text{Check second answer}      &4^2-13*4+36  &=0 \\
+&                                &16 - 52 + 36 &=0 \\
+&                                &-36+36       &=0 \\
+&                                &0            &=0 \checkmark{} \\
+&\text{Write the solution set}   &\models x\epsilon\{9,4\} &\leftrightarrow x^2-13x+36=0
+\end{align*}
+%\end{equation}
+
+\subsection{Quadratic Formula}
+
+The quadratic formula will always find solutions to a quadratic equation, but is more complex and should only be used in cases where factoring does not work. We use double squiggly bars to represent ``approximately equal to''. Since the square root function can produce {\bf irrational numbers}, or numbers that cannot be represented as a ratio of 2 numbers, we write a portion of the decimal and change the equals sign to the double squiggly bar. For a quadratic equation in standard form, the solutions can be found using:
+
+\begin{equation}
+\label{(6.10)}
+				       x= \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+\end{equation}
+
+
+\subsubsection{Example:}
+%\begin{equation}
+
+\begin{align*}\label{(6.11)}
+&       &3x^2+8x-72&=0 \\
+&\text{Use addition in the numerator:}  &x&= \frac{-8+\sqrt{8^2-4*3*-72}}{2*3} \\
+&       &x&=\frac{-8+\sqrt{64+864}}{6}\\
+&       &x&=\frac{-8+\sqrt{928}}{6}\\
+&       &x&\approx \frac{-8+30.46}{6}\\
+&       &x&\approx \frac{22.46}{6}\\
+&       &x&\approx 3.74\\
+&\text{Use subtraction in the numerator:}  &x&= \frac{-8-\sqrt{8^2-4*3*-72}}{2*3} \\
+&       &x&=\frac{-8-\sqrt{928}}{6}\\
+&       &x&\approx \frac{-8-30.46}{6}\\
+&       &x&\approx \frac{-38.46}{6}\\
+&       &x&\approx -6.41\\
+&\text{Check first answer:}  &&3*(3.74)^2+8*3.74-72 \approx 0 \\
+&       &&3*13.99+29.92-72 \approx0\\
+&       &&41.97-42.08 \approx 0\\
+&       &&-.11 \approx 0 \checkmark{} \\
+&\text{Check second answer:}  &&3*(-6.41)^2+8*-6.41-72 \approx 0 \\
+&       &&3*41.09-51.28-72 \approx0\\
+&       &&123.27-123.28 \approx 0\\
+&       &&-.01 \approx 0 \checkmark{} \\
+&\text{Write the solution set}   &\models x\epsilon\{-6.41,3.74\} &\leftrightarrow 3x^2+8x-72=0
+\end{align*}
+%\end{equation}
+				             
+Note: The real unapproximated solutions are $\frac{2\sqrt{58}}{3}-\frac{4}{3}$ and $-\frac{4}{3}-\frac{2\sqrt{58}}{3}$. We will learn about simplifying radicals in a future section.
+
+\subsection{Complete the Square}
+
+The last way we show to solve a quadratic equation forces the equation to be factorable by perfect squares. For example:
+
+\begin{center}
+$x^2+14x+5=0$
+\end{center}
+
+To make the given equation a perfect square, the $c$ term must be the square of $\frac{1}{2}$ of the $b$ term. So take $\frac{1}{2} * 14 = 7$ and square it. $7^2=49$. So instead of $5$ we need $49$, so let's add $44$ to $5$. But remember to keep equivalence we need to also add $44$ to the right hand side.
+\begin{center}
+					$x^2+14x+5+44=0+44$
+					
+					$x^2+14x+49    = 44$
+\end{center}
+
+%\begin{equation}
+\begin{align*}\label{(6.12)}
+&\text{Now Factor and Solve:}  &(x+7)^2&=44 \\
+&\text{Square root both sides} &x+7 &\approx 6.63\text{ or }-6.63 \\
+&\text{Solve for x}            &x &\approx -.366\text{ or } -13.63 \\ 
+&\text{Check first answer:}  &(-.366)^2+14*-.366+5 &\approx 0 \\
+&       &.1345+(-5.135)+5 &\approx 0\\
+&       &3.8*10^{-9} &\approx 0 \checkmark{}\\
+&\text{Check second answer:}  &(-13.63)^2+14*-13.63+5 &\approx 0 \\
+&       &185.78+(-190.82)+5 &\approx 0\\
+&       &-.04 &\approx 0 \checkmark{}\\
+&\text{Write the solution set}   &\models x\epsilon\{-13.63,-.366\} &\leftrightarrow x^2+14x+5=0
+\end{align*}
+%\end{equation}
+
+\subsection{Quadratic Inequalities}
+
+Inequalities are solved in the same way, but there is more work analyzing the final answer. Since inequalities give a range of values, our final answer will include all values in between the two variable values we solve for ({\bf intersection}) OR all values not between the two values we solve for ({\bf union}). To represent our solution we use a compound inequality which is basically two inequalities with an ``and'' or ``or'' in between. One of the bounds will have the inequality sign switched and it is useful to check our answers to make sure we have not switched the wrong sign.
+
+\subsubsection{Union Example:}
+
+%\begin{equation}
+\begin{align*}\label{(6.13)}
+&       &x^2+12x+36 &> 9& \\
+&\text{Factor Perfect Square:}  &(x+6)^2 &>9& \\
+&\text{Square Root}             &x+6&>3 \text{ or } x+6<-3\\
+&\text{Solve for x}             &x&>-3 \text{ or } x<-9\\
+&\text{Check one:}  &\text{Let }x=-2&\text{ because it's greater than -3} \\
+&       &&(-2)^2+12*-2+36 > 9\\
+&       &&4-24+36 > 9	\\
+&       && 16 > 9 \checkmark{} \\
+&\text{Check two:}  &\text{Let }x=-10&\text{ because it's less than -9} \\
+&       &&(-10)^2+12*-10+36 > 9\\
+&       &&100-120+36 > 9	\\
+&       && 16 > 9 \checkmark{} \\
+&\text{Write the solution}   &&\{x|x>-3\text{ or }x<-9\}
+\end{align*}
+%\end{equation}
+
+\subsubsection{Intersection Example:}
+
+%\begin{equation}
+\begin{align*}\label{(6.14)}
+&                             &x^2-9x-22   &< 0& \\
+&\text{Factor Part by Part:}  &(x-11)(x+2) &< 0& \\
+&\text{Setup Inequalities}    & x-11       &< 0 \text{ and } x+2 > 0&\\
+&\text{Solve for x}           & x          &<11 \text{ and } x>-2   &\\
+&\text{Check one:}            &\text{Let }x=10&\text{ because it's less than 11}& \\
+&       &&(10)^2-9*10-22 < 0\\
+&       &&100-90-22<0	\\
+&       && -12 < 0 \checkmark{} \\
+&\text{Check two:}  &\text{Let }x=-1&\text{ because it's greater than -2} \\
+&       &&(-1)^2-9*-1-22 < 0\\
+&       &&1+9-22 < 0	\\
+&       && -12 < 0 \checkmark{} \\
+&\text{Write the solution}   &&\{x|x<11\text{ and }x<-2\} \\
+&\text{An alternate solution} &&\{x|-2<x<11\}
+\end{align*}
+%\end{equation}
+
+					
+
+\subsection{Problems:}
+
+Factor the following as much as possible.
+\vspace{3mm}
+
+1) $x^2+20x+100$
+
+2) $x^2-256$
+
+3) $x^2+2x-8$
+
+4) $x^2-3x-18$
+
+5) $x^2-9x+14$
+
+6) $x^2+20x+75$
+
+7) $x^8-256$
+
+8) $7x^2+9x+2$
+
+9) $x^4+17x^2-18$
+
+10) $5x^3+10x^2+5x$
+
+\vspace{3mm}
+Solve the Quadratic Equations.
+\vspace{3mm}
+
+11) $x^2+8x+15=0$
+
+12) $2x^2+17x+33=0$
+
+13) $x^2-18x+82=0$
+
+14) $8x^2-22x-13=0$
+
+15) $-3x^2-7x+14=0$
+
+\vspace{3mm}
+Solve the Quadratic Inequalities.
+\vspace{3mm}
+
+16) $x^2-6x+9 < 14$
+
+17) $x^2-11x-30 > 4$
+
+18) $3x^2-12x-15 < 12$
+
+19) $11x^2-68x+23 > 432$
+
+20) $4x^2-16 < 15$
+
+\section{Applications of Quadratic Equations and Inequalities}
+
+\subsection{Solving for a Single Variable in a Multi-Variable Equation}
+Quadratic equations are a nice representation for kinematics, areas, and more. A ball’s trajectory through the air, area of gardens, and product of consecutive integers are just some of the concepts solvable through quadratic equations. 
+
+Because basic physics equations are mostly linear or quadratic, they make great application examples. However, the equations are normally written with more than one variable. We will show how to solve for a single variable in an equation of more than one variable. Consider the displacement equation:
+
+\begin{equation}
+\label{(7.1)}
+d=d_0+v_0t+\frac{1}{2}at^2
+\end{equation}
+
+Where $d$ is final displacement, $d_0$ is initial displacement, $v_0$ is initial velocity, $t$ is time, and $a$ is acceleration. Solve for acceleration.
+
+We want to isolate $a$ from the other variables.
+
+%\begin{equation}
+\begin{align*}\label{(7.2)}
+&\text{Subtract }d_0  &d-d_0&=v_0t+\frac{1}{2}at^2 \\
+&\text{Subtract }v_0t
+&d-d_0-v_0t&=\frac{1}{2}at^2 \\
+&\text{Divide by }\frac{1}{2}  &2(d-d_0-v_0t)&=at^2 \\
+&\text{Divide by }t^2
+&a&=\frac{2(d-d_0-v_0t)}{t^2} 
+\end{align*}
+%\end{equation}
+
+\subsection{Substituting Real Values}
+
+Now we show a different type of problem related to \ref{(7.1)}:
+
+\begin{center}
+
+Consider a giant red rocket in mid-flight. Its initial displacement is $20$ meters, initial velocity is $21\text{ }m/s$, and acceleration is $-10\text{ }m/s^2$. Find how long ago the rocket took off and the time it will hit the ground.
+
+\end{center}
+
+What we need to understand to solve this problem is at take off and at the moment the rocket hits the ground, its final displacement is 0. 
+
+%\begin{equation}
+\label{(7.3)}
+\begin{align*}
+&\text{Plug Numbers into \ref{(7.1)}}  &0&=20+21t+\frac{1}{2}(-10)t^2 \\
+&\text{Simplify}
+&0&=20+21t-5t^2 \\
+&\text{Factor Part by Part Plus Grouping }  &0&=20-4t+25t-5t^2 \\
+&\text{Reverse Distribute }
+&0&=-4(t-5)-5t(t-5) \\
+&\text{Reverse Distribute }
+&0&=(-5t-4)(t-5) \\
+&\text{Set up Linear Equations} &-5t-4=0 &\text{ OR } t-5=0 \\
+&\text{Solve} & t=-\frac{4}{5} &\text{ OR }t=5 \\
+&\text{Analyze} &\text{Negative time means it }&\text{happened in the past. Positive means in the future.} \\
+&\text{Write Solution} & \text{The Rocket took off } \frac{4}{5}&\text{ seconds ago. It will land in 5 seconds.}
+\end{align*}
+%\end{equation}
+
+\subsection{Minimum and Maximum}
+
+The minimum and maximum of a quadratic equation become important in application problems. If the coefficient of the squared term is negative, the quadratic equation has a maximum, but no minimum. If the coefficient of the squared term is positive, the quadratic equation has a minimum, but no maximum. It is impossible for a quadratic equation to have a minimum and maximum without bounds. In Chapter 2, we will visualize why. The formula for a minimum or maximum of a quadratic equation in standard form is $-\frac{b}{2a}$.
+
+\subsection{Problems}
+
+\vspace{3mm}
+
+Solve the word problems:
+
+\vspace{3mm}
+
+1) The product of two consecutive odd integers is $4095$. What are the numbers?
+
+
+2) The total mechanical energy in a system is represented by $E=K+U$ where $K$ is kinetic energy and $U$ is potential energy. Kinetic energy can be represented by $K=\frac{1}{2}mv^2$ where $m$ is mass and $v$ is velocity. Potential energy can be represented by $U=mgh$ where $m$ is mass, $g$ is gravitational acceleration equal to $-9.81$ $m/s^2$, and $h$ is the height off the ground. If total mechanical energy is $0$, solve for $h$.
+
+
+3) An inground pool with dimensions $22$ feet by $30$ feet needs a brick border installed all around it, but the maximum area available is $885$ square feet. If the width and length of the border are the same, what could the width be?
+
+
+4) An Uber driver charges a flat rate of \$$30$ to anywhere in the city. She averages $28$ customers a day. The Yew Nork Times says that, Uber drivers lose $3$ customers a day for every dollar added to their rate. Use Revenue=Rate*Customers to maximize the Uber driver’s revenue. What should she charge?
+
+
+5) A boy's sister has a $1000$-foot piece of wood and wants to trap her brother in a rectangular area! What are the dimensions of the largest such area? What is the largest area?
+
+
+6) A product of a pair of twin primes (two primes who's difference is $2$) is $22$ more than the square of the smaller one.
+
+
+7) The product of two primes is $667$. What are the numbers?
+
+\section{Equations Reducible to Quadratic Form}
+
+We will now cover a section virtually on pattern-recognition. Often, as a first step, a complex equation can be converted into a quadratic which can be solved with the methods previously listed. For example, consider the equation
+
+\begin{equation}
+\label{(8.1)}
+2x^{132}-9x^{66}+9=0.
+\end{equation}
+
+Whoa, a $66^{th}$ power and a $132^{nd}$ power! But we can solve this! Introduce a new variable $u$ to stand for $x^{66}$, and rewrite the equation as
+\begin{equation}
+\label{(8.2)}
+2u^2-9u+9=0.               
+\end{equation}
+                     
+Using the quadratic equation solving methods from Section \ref{Quadr}, we get
+
+\begin{equation}
+\label{(8.3)}
+\begin{align*}
+&2u^2-6u-3u+9&=&\ 0&\Longleftrightarrow&\qquad 2u(u-3)-3(u-3)&=\ &0 \\
+&&\phantom{=}&\phantom0&\Longleftrightarrow&\qquad (2u-3)(u-3)&=&\ 0 \\
+&&\phantom{=}&\phantom0&\Longleftrightarrow&\qquad 
+u=\frac{3}{2}\text{ or } u=3 
+\end{align*}
+\end{equation}
+
+Now solve for $x$ from (\ref{(8.3)}), as follows:
+\begin{equation}
+\label{(8.3)}
+\begin{align*}
+& u&=&\ x^{66}&\Longleftrightarrow&&&&&&\ \sqrt[66]{u}\ &=\ x& \\
+&&\phantom{=}&\phantom0&\Longleftrightarrow&
+&\left(x=\sqrt[66]{\frac32}\right.&\approx\hspace{-.1in}&1.006&\left.\phantom{\sqrt[66]{\frac11}}\hspace{-.25in}\right)&
+&\text{or}&&\left(x=\phantom{\sqrt[66]{\frac32}}\hspace{-.3in}\sqrt[66]3\right. \hspace{-.1in} &\approx&
+\ 1.017 \hspace{-.25in} \left.\phantom{\sqrt[66]{\frac32}}\right)
+\end{align*}
+\end{equation}
+                
+                
+    
+
+And check.
+
+\begin{equation}
+\label{(8.4)}
+\begin{align*}
+&2(1.006)^{132}-9(1.006)^{66}+9 &\approx&\ 0 \\
+&4.405-13.357+9 &\approx&\ 0 \\
+&0.048 &\approx&\ 0 \checkmark{} \\
+&2(1.017)^{132}-9(1.017)^{66}+9 &\approx&\ 0 \\
+&18.51-27.38+9 &\approx&\ 0 \\
+&.13 &\approx&\ 0 \checkmark{}
+\end{align*}    
+\end{equation}
+     
+
+\subsection{Problems:}
+
+Solve the following by reducing the problem to quadratic form.
+
+\vspace{3mm}
+
+1) $x^4-19x^2+18=0$
+
+2) $\frac{7x^2}{7}+\frac{13x}{7}+6=0$
+
+3) $x^{-100}-9x^{-50}+20=0$
+
+4) $3x+13\sqrt(x)+12=0$
+
+\section{Simplifying Radicals and Radical Equations}
+
+Previously when solving the quadratic formula, we plugged all of the quadratic formula into our calculators and wrote our answer as an approximated decimal. Here we learn how write the real answer in simplified form as well as other radicals in simplified form.
+We start by solving
+\begin{equation}
+\label{(9.1)}
+\begin{align*}
+&&&&4x^2+16x+8&=0\\
+&x&=&\frac{-16+\sqrt{16^2-4(4)(8)}}{2(4)}\hspace{-.6in}&\text{or}&\hspace{.2in}\frac{-16-\sqrt{16^2-4(4)(8)}}{2(4)} \\
+&x&=&\frac{-16+\sqrt{128}}{8}&\text{or}&\hspace{.2in}\frac{-16-\sqrt{128}}{8}
+\end{align*}
+\end{equation}
+
+But now we want to simplify the $\sqrt{128}$. To do this, we prime factorize $128$ to $2*2*2*2*2*2*2$. We can transform the radical from
+
+\begin{center}
+$                \sqrt{2*2*2*2*2*2*2} \\ $
+
+                    to
+
+$\\ \sqrt{2*2}*\sqrt{2*2}*\sqrt{2*2}*\sqrt{2}$
+\end{center}
+And solve
+
+\begin{center}
+                    $2*2*2*\sqrt{2}$
+\end{center}
+To get
+
+\begin{center}
+                        $8\sqrt{2}$
+\end{center}
+Now plug this back into our quadratic formula
+
+\begin{center}           
+    $\frac{-16+8\sqrt{2}}{8}$ or $\frac{-16-8\sqrt{2}}{8}$
+\end{center}
+Factor out an $8$
+
+\begin{center}
+$\frac{8(-2+\sqrt{2})}{8}$ or $\frac{8(-2-\sqrt{2})}{8}$
+\end{center}
+And luckily our ratio was cancelled out!    
+
+\begin{center}
+$x=-2+\sqrt{2}$ or $-2-\sqrt{2}$
+\end{center}
+Write our final solution.
+
+\begin{center}
+$\models x\epsilon\{-2-\sqrt{2},-2+\sqrt{2}\} \leftrightarrow 4x^2+16x+8=0$
+\end{center}
+
+Now we will cover simplifying radicals in the denominator of an equation. The act of simplifying radicals in the denominator is also known as \textbf{rationalizing the denominator}. Consider the ratio
+\begin{center}
+                    $\frac{1}{\sqrt{2}}$
+\end{center}
+To simplify this ratio we multiply the top and bottom by $\sqrt{2}$ and the simplified version is
+\begin{center}
+                    $\frac{\sqrt{2}}{2}$
+\end{center}
+Now consider a more advanced ratio
+\begin{center}
+                    $\frac{1}{1+\sqrt{2}}$
+\end{center}
+
+We can naively try the same approach and multiply top and bottom by $1+\sqrt{2}$, but we end up with 
+\begin{center}
+                $\frac{1+\sqrt{2}}{3+2\sqrt{2}}$
+\end{center}
+
+which does not help us because we still have a radical in the denominator. So here we use a \textbf{conjugate}, or binomial with a negated second term. A binomial is a polynomial of two terms. So instead we multiply by $1-\sqrt{2}$ to get:
+
+\begin{center}
+                    $\frac{-1+\sqrt{2}}{2}$
+\end{center}
+
+The last thing we need to know about radicals before solving any radical equation in the real line is the square root ($\sqrt$) function only gives positive roots, so we must check our answers after solving radical equations. Sometimes we may solve for two solutions, but both are incorrect! Answers that can be solved for, but are incorrect are called \textbf{extraneous solutions}. Let us try an example.
+
+\begin{equation}
+\begin{align*}
+\label{(9.1)}
+&                            &x=\sqrt{x+12} \\
+&\text{Square both sides}            &x^2=x+12 \\
+&\text{Write in Standard Form}       &x^2-x-12=0 \\
+&\text{Factor}                    &(x-4)(x+3)=0 \\
+&\text{Write possible answers}        &x=4 or x=-3 \\
+&\text{Check}                    &4=\sqrt{4+12} \\
+&                    &4=\sqrt{16} \\
+&                    &4=4 \checkmark{} \\ 
+&                    &-3=\sqrt{-3+12} \\
+&                    &-3=\sqrt{9} \\
+&                    &-3\neq3 \\             &\text{Extraneous Solution!}\\
+&\text{Write Solution}    &\models x\epsilon\{4\} \leftrightarrow x=\sqrt{x+12}
+\end{align*}
+\end{equation}
+
+\subsection{Problems:}
+\vspace{3mm}
+1) $z+\sqrt{5z-13}=1$\\
+2) $\sqrt{y+4}=\sqrt{y-11}+3$
+
+\end{document}
